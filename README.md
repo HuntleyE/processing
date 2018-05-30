@@ -1,5 +1,5 @@
 # processing
-# Project Title and purpose
+# Spin Me Right Round and PVector
 
 One Paragraph of project description goes here
 
