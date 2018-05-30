@@ -1,5 +1,3 @@
-ArrayList<Dot> dots; 
-ArrayList<Box> boxes;  
 Box merc;
 Box ven;
 Box ear;
@@ -8,17 +6,23 @@ Box jup;
 Box sat; 
 Box urn; 
 Box nep; 
-int max = 3;
-Sun s = new Sun(); 
+Sun s;
 PFont f; 
 int state = 0; 
 String typed = ""; 
 int LastInput = 0;  
+ArrayList<Stars> star; 
 
 
 
 void setup(){
-  size(1000, 1000);  
+  size(900, 900); 
+  star = new ArrayList<Stars>(); 
+  for (int i = 0; i<200; i++){
+    star.add (new Stars(i));
+    i++;
+  }
+  s = new Sun();
   merc = new Box(70); 
   ven = new Box(120); 
   ear = new Box(170);
@@ -31,6 +35,9 @@ void setup(){
   
 void draw(){
   background(0); 
+  for (int i = 0; i<star.size(); i++){
+    star.get(i++).drawStar();
+  }
   s.display(); 
    merc.update(.065);
    merc.setColor(66,86,244); 
@@ -56,6 +63,9 @@ void draw(){
    nep.update(.004); 
    nep.setColor(66,107,244); 
    nep.display(12,12); 
+   
+   textSize(25); 
+   text("Solar System (not to scale)", 10,30); 
    
   }
   
