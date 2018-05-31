@@ -13,6 +13,7 @@ int state = 0;
 String typed = ""; 
 int LastInput = 0;  
 ArrayList<Stars> star; 
+ArrayList <Dot> dots; 
 
 
 
@@ -33,6 +34,11 @@ void setup(){
   urn = new Box(370);
   nep = new Box(420); 
   plu = new Box(470); 
+  dots = new ArrayList<Dot>(); 
+  for (int j = 0; j<10; j++){
+    dots.add (new Dot(j));
+    j++;
+  }
 }
   
 void draw(){
@@ -72,6 +78,9 @@ void draw(){
    textSize(25); 
    fill(244,66,203); 
    text("Solar System (not to scale)", 10,30); 
+   for (int i = 0; i<dots.size(); i++){
+     dots.get(i++).drawPlanet();
+   }
    
   }
   
