@@ -1,11 +1,11 @@
 # processing
 # Spin Me Right Round and PVector
 
-One Paragraph of project description goes here
+This project shows a our Solar System not to scale. 
 
 ### Difficulties or opportunities you encountered along the way.
 
-The toughest part was...
+The toughest part was trying to get the planets to spin. The next part will be trying to get the planets typed in. 
 
 ### Most interesting piece of your code and explanation for what it does.
 
@@ -60,14 +60,14 @@ class Box extends Sun{
   
  
 ```
-This is the code that moves down the tree as decisions are made.  It gets each value from both left and right and also casts the value to a String.  If the progressions arrives at the leaf nodes, those values are printed.
+This is the code uses PVectors to get each of the ellipses to rotate using radians. 
 ## Built With
 
 * [Processing](https://processing.org/) - The IDE used
 
 ## Authors
 
-* **Billie Thompson** 
+* **Emily Huntley** 
 
 
 ## Acknowledgments
