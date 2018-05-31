@@ -6,6 +6,7 @@ Box jup;
 Box sat; 
 Box urn; 
 Box nep; 
+Box plu;
 Sun s;
 PFont f; 
 int state = 0; 
@@ -16,9 +17,9 @@ ArrayList<Stars> star;
 
 
 void setup(){
-  size(900, 900); 
+  size(1000, 1000); 
   star = new ArrayList<Stars>(); 
-  for (int i = 0; i<200; i++){
+  for (int i = 0; i<300; i++){
     star.add (new Stars(i));
     i++;
   }
@@ -31,6 +32,7 @@ void setup(){
   sat = new Box(320); 
   urn = new Box(370);
   nep = new Box(420); 
+  plu = new Box(470); 
 }
   
 void draw(){
@@ -63,8 +65,12 @@ void draw(){
    nep.update(.004); 
    nep.setColor(66,107,244); 
    nep.display(12,12); 
+   plu.update(.003); 
+   plu.setColor(244,176,66); 
+   plu.display(7,7); 
    
    textSize(25); 
+   fill(244,66,203); 
    text("Solar System (not to scale)", 10,30); 
    
   }
